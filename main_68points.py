@@ -1,6 +1,7 @@
-# 2018-2-26
+# created: 2018-2-26
 # By TimeStamp
 # cnblogs: http://www.cnblogs.com/AdaminXie
+# GitHub: https://github.com/coneypo/Dlib_face_detection_from_camera
 
 import dlib                     #人脸识别的库dlib
 import numpy as np              #数据处理的库numpy
@@ -17,8 +18,8 @@ cap = cv2.VideoCapture(0)
 # 设置视频参数，propId设置的视频参数，value设置的参数值
 cap.set(3, 480)
 
-# 截图screenshoot的计数器
-cnt = 0
+# 截图screenshot的计数器
+screenshot_cnt = 0
 
 # cap.isOpened（） 返回true/false 检查初始化是否成功
 while(cap.isOpened()):
@@ -26,7 +27,7 @@ while(cap.isOpened()):
     # cap.read()
     # 返回两个值：
     #    一个布尔值true/false，用来判断读取视频是否成功/是否到视频末尾
-    #    图像对象，图像的三维矩阵
+    #    图像对象，一帧图像
     flag, im_rd = cap.read()
 
     # 每帧数据延时1ms，延时为0读取的是静态帧
@@ -37,7 +38,6 @@ while(cap.isOpened()):
 
     # 人脸数rects
     rects = detector(img_gray, 0)
-
     #print(len(rects))
 
     # 待会要写的字体
@@ -69,8 +69,8 @@ while(cap.isOpened()):
 
     # 按下s键保存
     if (k == ord('s')):
-        cnt+=1
-        cv2.imwrite("screenshoot"+str(cnt)+".jpg", im_rd)
+        screenshot_cnt+=1
+        cv2.imwrite("screenshot_"+str(screenshot_cnt)+".jpg", im_rd)
 
     # 按下q键退出
     if(k==ord('q')):
