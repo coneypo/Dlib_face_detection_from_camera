@@ -1,8 +1,12 @@
-# created at 2018-2-26
-# updated at 2018-5-14
-# By TimeStamp
-# cnblogs: http://www.cnblogs.com/AdaminXie
 # 调用摄像头，进行人脸捕获，和68个特征点的追踪
+
+# created at 2018-2-26
+# updated at 2018-9-06
+
+# Author:   coneypo
+# Blog:     http://www.cnblogs.com/AdaminXie
+# GitHub:   https://github.com/coneypo/Dlib_face_detection_from_camera
+
 
 import dlib         # 人脸识别的库dlib
 import numpy as np  # 数据处理的库numpy
@@ -10,7 +14,7 @@ import cv2          # 图像处理的库OpenCv
 import time
 
 # 储存截图的目录
-path_screenshots = "F:/code/python/P_camera_features_68points/screenshots/"
+path_screenshots = "screen_shots/"
 
 # dlib预测器
 detector = dlib.get_frontal_face_detector()
@@ -23,11 +27,11 @@ cap = cv2.VideoCapture(0)
 # 设置视频参数，propId设置的视频参数，value设置的参数值
 cap.set(3, 480)
 
-# 截图screenshoot的计数器
+# 截图 screenshoot 的计数器
 cnt = 0
 
 # cap.isOpened（） 返回true/false 检查初始化是否成功
-while (cap.isOpened()):
+while cap.isOpened():
 
     # cap.read()
     # 返回两个值：
@@ -71,14 +75,14 @@ while (cap.isOpened()):
         cv2.putText(im_rd, "no face", (20, 50), font, 1, (0, 0, 0), 1, cv2.LINE_AA)
 
     # 添加说明
-    im_rd = cv2.putText(im_rd, "s: screenshot", (20, 400), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
-    im_rd = cv2.putText(im_rd, "q: quit", (20, 450), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
+    im_rd = cv2.putText(im_rd, "press 'S': screen shot", (20, 400), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
+    im_rd = cv2.putText(im_rd, "press 'Q': quit", (20, 450), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
 
     # 按下s键保存
     if k == ord('s'):
         cnt += 1
-        print(path_screenshots+ "screenshoot" + "_" + str(cnt) + time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + ".jpg")
-        cv2.imwrite(path_screenshots+ "screenshoot" + "_" + str(cnt) + "_" + time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + ".jpg", im_rd)
+        print(path_screenshots + "screen_shoot" + "_" + str(cnt) + time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + ".jpg")
+        cv2.imwrite(path_screenshots + "screen_shoot" + "_" + str(cnt) + "_" + time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + ".jpg", im_rd)
 
     # 按下q键退出
     if k == ord('q'):

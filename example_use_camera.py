@@ -1,5 +1,12 @@
 # 调用摄像头
 
+# created at 2018-2-26
+# updated at 2018-9-06
+
+# Author:   coneypo
+# Blog:     http://www.cnblogs.com/AdaminXie
+# GitHub:   https://github.com/coneypo/Dlib_face_detection_from_camera
+
 import cv2
 
 cap = cv2.VideoCapture(0)
@@ -8,7 +15,8 @@ cap = cv2.VideoCapture(0)
 # 设置视频参数，propId设置的视频参数，value设置的参数值
 cap.set(3, 480)
 
-# cap.isOpened（） 返回true/false 检查初始化是否成功
+# cap.isOpened（）
+# 返回true/false 检查初始化是否成功
 print(cap.isOpened())
 
 # cap.read()
