@@ -6,9 +6,11 @@ Detect the faces from camera, and draw the 68 feature points
 
 </br>
 1. example_use_camera.py : 
+	
 	The way to use camera by OpenCv in Python 
 </br>
 2. get_features_from_camera.py: 
+	
 	Real-time capture the faces and show the face features in the camera	
 </br>
 
