@@ -1,20 +1,20 @@
-# Dlib_face_detection_from_camera
+# Dlib\_face\_detection\_from\_camera
 Detect the faces from camera, and draw the 68 feature points 
 </br>
 摄像头人脸检测并进行特征点标定
 
 </br>
-1. example_use_camera.py : 
+Author : coneypo
+
+Last Update : 23 Sep
+
+</br>
+1. example\_use_camera.py : 
 	
 	The way to use camera by OpenCv in Python 
 </br>
-2. get_features_from_camera.py: 
+2. get\_features\_from_camera.py: 
 	
 	Real-time capture the faces and show the face features in the camera	
 </br>
-
-Thanks for your support.
-
-Author: coneypo
-
-Last Update: 23 Sep
+For more details, please visit my blog: https://www.cnblogs.com/AdaminXie/p/8472743.html
