@@ -1,8 +1,7 @@
 # Dlib_face_detection_from_camera
->>>
 Detect the faces from camera, and draw the 68 feature points 
 摄像头人脸检测并进行特征点标定
->>>
+
 
 </br>
 1. example_use_camera.py : 
