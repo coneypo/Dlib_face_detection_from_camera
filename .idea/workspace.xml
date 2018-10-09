@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c1d80be-d939-4647-81ec-7e3ceee9db6b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/remove_ss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example_use_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_use_camera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_features_from_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_features_from_camera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shots/screen_shoot_1_2018-09-06-14-47-59.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shots/screen_shoot_1_2018-09-06-15-25-50.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shots/screenshoot_1_2018-05-14-11-04-23.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +23,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="264" />
+          <entry key="py" value="269" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="264" />
+          <entry key="Python" value="269" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,23 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_features_from_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="7" selection-end-column="22" />
-              <folding>
-                <element signature="e#212#244#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/remove_ss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="180">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -122,14 +113,14 @@
         <option value="$PROJECT_DIR$/camera_get_features_68points.py" />
         <option value="$PROJECT_DIR$/get_camera.py" />
         <option value="$PROJECT_DIR$/example_use_camera.py" />
-        <option value="$PROJECT_DIR$/get_features_from_camera.py" />
         <option value="$PROJECT_DIR$/remove_ss.py" />
+        <option value="$PROJECT_DIR$/get_features_from_camera.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="436" />
-    <option name="y" value="85" />
+    <option name="x" value="847" />
+    <option name="y" value="168" />
     <option name="width" value="1546" />
     <option name="height" value="929" />
   </component>
@@ -175,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.remove_ss">
+  <component name="RunManager" selected="Python.get_features_from_camera">
     <configuration name="camera_get_features_68points" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="P_cv_camera" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -290,8 +281,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.remove_ss" />
         <item itemvalue="Python.get_features_from_camera" />
+        <item itemvalue="Python.remove_ss" />
         <item itemvalue="Python.example_use_camera" />
         <item itemvalue="Python.get_camera" />
         <item itemvalue="Python.camera_get_features_68points" />
@@ -312,7 +303,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="324" y="178" width="1546" height="929" extended-state="0" />
+    <frame x="312" y="252" width="1546" height="929" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29114753" />
@@ -351,20 +342,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_features_from_camera.py">
+    <entry file="file://$PROJECT_DIR$/remove_ss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#212#244#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/remove_ss.py">
+    <entry file="file://$PROJECT_DIR$/get_features_from_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
