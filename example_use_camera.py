@@ -1,11 +1,11 @@
 # 调用摄像头
 
-# created at 2018-2-26
-# updated at 2018-9-06
-
 # Author:   coneypo
 # Blog:     http://www.cnblogs.com/AdaminXie
 # GitHub:   https://github.com/coneypo/Dlib_face_detection_from_camera
+
+# Created at 2018-02-26
+# Updated at 2018-10-09
 
 import cv2
 
