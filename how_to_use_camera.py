@@ -15,8 +15,8 @@ cap = cv2.VideoCapture(0)
 # 设置视频参数，propId设置的视频参数，value设置的参数值
 cap.set(3, 480)
 
-# cap.isOpened（）
-# 返回true/false 检查初始化是否成功
+# cap.isOpened()
+# 返回 true/false 检查初始化是否成功
 print(cap.isOpened())
 
 # cap.read()
@@ -33,15 +33,15 @@ print(cap.isOpened())
           R2：图像的三维矩阵
 """
 while cap.isOpened():
-    ret_flag, Vshow = cap.read()
-    cv2.imshow("camera", Vshow)
+    ret_flag, img_rd = cap.read()
+    cv2.imshow("camera", img_rd)
 
     # 每帧数据延时1ms，延时为0读取的是静态帧
     k = cv2.waitKey(1)
 
     # 保存
     if k == ord('s'):
-        cv2.imwrite("test.jpg", Vshow)
+        cv2.imwrite("test.jpg", img_rd)
 
     # 退出
     if k == ord('q'):

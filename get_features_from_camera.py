@@ -13,10 +13,10 @@ import cv2          # 图像处理的库 OpenCv
 import time
 
 # 储存截图的目录
-path_screenshots = "screenshots/"
+path_screenshots = "data/screenshots/"
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('data/dlib/shape_predictor_68_face_landmarks.dat')
 
 # 创建 cv2 摄像头对象
 cap = cv2.VideoCapture(0)
@@ -33,7 +33,7 @@ while cap.isOpened():
 
     # cap.read()
     # 返回两个值：
-    #    一个布尔值t rue/false，用来判断读取视频是否成功/是否到视频末尾
+    #    一个布尔值 true/false，用来判断读取视频是否成功/是否到视频末尾
     #    图像对象，图像的三维矩阵
     flag, im_rd = cap.read()
 
@@ -73,7 +73,7 @@ while cap.isOpened():
         cv2.putText(im_rd, "no face", (20, 50), font, 1, (0, 0, 0), 1, cv2.LINE_AA)
 
     # 添加说明
-    im_rd = cv2.putText(im_rd, "press 'S': screen shot", (20, 400), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
+    im_rd = cv2.putText(im_rd, "press 'S': screenshot", (20, 400), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
     im_rd = cv2.putText(im_rd, "press 'Q': quit", (20, 450), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
 
     # 按下 's' 键保存
@@ -88,8 +88,8 @@ while cap.isOpened():
 
     # 窗口显示
     # 参数取 0 可以拖动缩放窗口，为 1 不可以
-    cv2.namedWindow("camera", 0)
-    #cv2.namedWindow("camera", 1)
+    # cv2.namedWindow("camera", 0)
+    cv2.namedWindow("camera", 1)
 
     cv2.imshow("camera", im_rd)
 

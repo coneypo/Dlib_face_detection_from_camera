@@ -8,8 +8,8 @@
 
 import os
 
-ss = os.listdir("screenshots/")
+ss = os.listdir("data/screenshots/")
 
 for image in ss:
-    print("Remove: ", "screenshots/"+image)
-    os.remove("screenshots/"+image)
+    print("Remove: ", "data/screenshots/"+image)
+    os.remove("data/screenshots/"+image)
