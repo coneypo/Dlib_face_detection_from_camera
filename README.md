@@ -22,5 +22,6 @@ Detect the faces from camera, and draw the 68 feature points
 
 <br>
 Author : coneypo<br>
-Last Update : 23 Sep<br>
+Mail : coneypo@foxmail.com<br>
+Last Update : 10 Oct<br>
 For more details, please visit my blog: https://www.cnblogs.com/AdaminXie/p/8472743.html
