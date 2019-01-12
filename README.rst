@@ -10,15 +10,14 @@ Detect faces from camera, and draw the
 调用摄像头进行人脸检测，并进行68个特征
 点标定;
 
-   
-   .. image:: for_readme/intro_1.png
-      :align: center
+.. image:: for_readme/intro_1.png
+   :align: center
 
 
 68个特征点位置:
    
-   .. image:: for_readme/intro_2.png
-      :align: center
+.. image:: for_readme/intro_2.png
+   :align: center
 
 
 About Source Code
@@ -55,6 +54,7 @@ For more details, please refer to my blog (in chinese) or contact me by e-mail;
 可以访问我的博客获取本项目的更详细介绍，如有问题欢迎邮件联系我:
 
   Blog: https://www.cnblogs.com/AdaminXie/p/8472743.html  
+  
   Mail: coneypo@foxmail.com
 
 
