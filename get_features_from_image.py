@@ -15,7 +15,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('data/dlib/shape_predictor_68_face_landmarks.dat')
 
 # 读取图像文件
-img_rd = cv2.imread("data/faces_to_detect/face_2.jpg")
+img_rd = cv2.imread("data/samples/face_2.jpg")
 img_gray = cv2.cvtColor(img_rd, cv2.COLOR_RGB2GRAY)
 
 # 人脸数
