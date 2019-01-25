@@ -29,11 +29,11 @@ Python 源码介绍如下:
 
    Use camera in Python;
 
-   Python Opencv 调用摄像头;
+   Python OpenCv 调用摄像头;
 
 #. get_features_from_images.py:
 
-   Show the 68 features points from photo;
+   Show the 68 features points from local images;
 
    显示本地图像文件中的人脸特征;
 
@@ -42,24 +42,17 @@ Python 源码介绍如下:
    This part will implement real-time face 
    detect and draw feature points;
 
-   这一步将调用摄像头进行实时人脸检测和特
-   征点绘制;
+   这一步将调用摄像头进行实时人脸检测和特征点绘制;
   
   
 More
 ****
 
-For more details, please refer to my blog (in chinese) or contact me by e-mail;
-
-可以访问我的博客获取本项目的更详细介绍，如有问题欢迎邮件联系我:
-
-  Blog: https://www.cnblogs.com/AdaminXie/p/8472743.html  
-  
-  Mail: coneypo@foxmail.com
-
-
-仅限于交流学习, 商业合作勿扰；
 
 Author: coneypo
+
+Blog: https://www.cnblogs.com/AdaminXie/p/8472743.html
+
+Mail: coneypo@foxmail.com
 
 Thanks for your support.
