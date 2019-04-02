@@ -20,31 +20,37 @@ Detect faces from camera, and draw the
    :align: center
 
 
+* Please install python packages: dlib and numpy at first:
+
+.. code-block:: bash
+
+   pip3 install -r requirements.txt
+
 About Source Code
 *****************
 
 Python 源码介绍如下:
 
-#. how_to_use_camera.py: 
+#. Use camera in Python / Python OpenCv 调用摄像头;
 
-   Use camera in Python;
+   .. code-block:: python
 
-   Python OpenCv 调用摄像头;
+      python3 how_to_use_camera.py:
 
-#. get_features_from_images.py:
+#. Show the 68 features points from local images / 显示本地图像文件中的人脸特征;
 
-   Show the 68 features points from local images;
+   .. code-block:: python
 
-   显示本地图像文件中的人脸特征;
+      python3 get_features_from_images.py:
 
-#. get_features_from_camera.py:
 
-   This part will implement real-time face 
-   detect and draw feature points;
+#. Real-time facial landmarks detect and draw feature points /这一步将调用摄像头进行实时人脸检测和特征点绘制;
 
-   这一步将调用摄像头进行实时人脸检测和特征点绘制;
-  
-  
+   .. code-block:: python
+
+      python3 get_features_from_camera.py:
+
+
 More
 ****
 
