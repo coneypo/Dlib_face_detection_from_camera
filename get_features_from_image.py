@@ -13,7 +13,9 @@ import cv2          # 图像处理的库 OpenCv
 
 # Dlib 正向人脸检测
 detector = dlib.get_frontal_face_detector()
-# Dlib 人脸特征点预测
+# 1. Using 5 landmarks
+# predictor = dlib.shape_predictor('data/dlib/shape_predictor_5_face_landmarks.dat')
+# 2. Using 68 landmarks
 predictor = dlib.shape_predictor('data/dlib/shape_predictor_68_face_landmarks.dat')
 
 # 读取图像文件

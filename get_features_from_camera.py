@@ -6,7 +6,7 @@
 # GitHub:   https://github.com/coneypo/Dlib_face_detection_from_camera
 
 # Created at 2018-02-26
-# Updated at 2019-04-01
+# Updated at 2019-12-20
 
 import dlib         # 人脸识别的库 Dlib
 import numpy as np  # 数据处理的库 numpy
@@ -19,7 +19,12 @@ path_screenshots = "data/screenshots/"
 
 # Dlib 正向人脸检测
 detector = dlib.get_frontal_face_detector()
+
+
 # Dlib 人脸特征点预测
+# 1. Using 5 landmarks
+# predictor = dlib.shape_predictor('data/dlib/shape_predictor_5_face_landmarks.dat')
+# 2. Using 68 landmarks
 predictor = dlib.shape_predictor('data/dlib/shape_predictor_68_face_landmarks.dat')
 
 # 创建 cv2 摄像头对象
@@ -86,7 +91,7 @@ while cap.isOpened():
         cv2.putText(im_rd, "No face detected", (20, 50), font, 1, (0, 0, 0), 1, cv2.LINE_AA)
 
     # 添加说明
-    im_rd = cv2.putText(im_rd, "'S': screenshot", (20, 400), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
+    im_rd = cv2.putText(im_rd, "'S': screen shot", (20, 400), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
     im_rd = cv2.putText(im_rd, "'Q': quit", (20, 450), font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
 
     # 按下 's' 键保存

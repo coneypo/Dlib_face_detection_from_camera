@@ -1,23 +1,29 @@
-Face detection with 68 features points
-######################################
+Face detection with features points
+###################################
 
 Introduction
 ************
 
-Detect faces from camera, and draw the 
-68 feature points of faces;
+Detect faces from camera, and draw the 5/68 feature points of faces;
 
-调用摄像头进行人脸检测，并进行68个特征
-点标定;
+#. Use "shape_predictor_5_face_landmarks.dat",
+   which is trained on the dlib 5-point face landmark dataset with 7198 faces.
+   and identify the corners of the eyes and bottom of the nose:
 
-.. image:: for_readme/intro_1.png
-   :align: center
+   .. image:: for_readme/predictor_5_landmarks.jpg
+      :align: center
 
 
-68个特征点位置:
-   
-.. image:: for_readme/intro_2.png
-   :align: center
+#. Use "shape_predictor_68_face_landmarks.dat", which is trained on the ibug 300-W
+   dataset (https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/)
+
+   This model is designed to work well with dlib's HOG face detector
+   and the CNN face detector.
+
+   It won't work as well when used with a face detector that produces differently aligned boxes
+
+   .. image:: for_readme/predictor_68_landmarks.jpg
+      :align: center
 
 
 * Please install python packages: dlib and numpy at first:
