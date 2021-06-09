@@ -1,16 +1,15 @@
-Face detection with features points
-###################################
+Face detection with landmarks
+#############################
 
 Introduction
 ************
 
-Detect faces from camera, and draw the 5/68 feature points of faces;
+检测人脸, 并进行 5/68 特征点检测 / Detect faces from camera, and draw the 5/68 facial landmarks of faces;
 
-#. Use "shape_predictor_5_face_landmarks.dat",
-   which is trained on the dlib 5-point face landmark dataset with 7198 faces.
+#. Use "shape_predictor_5_face_landmarks.dat", which is trained on the dlib 5-point face landmark dataset with 7198 faces.
    and identify the corners of the eyes and bottom of the nose:
 
-   .. image:: for_readme/predictor_5_landmarks.jpg
+   .. image:: for_readme/5_landmarks.png
       :align: center
 
 
@@ -22,11 +21,11 @@ Detect faces from camera, and draw the 5/68 feature points of faces;
 
    It won't work as well when used with a face detector that produces differently aligned boxes
 
-   .. image:: for_readme/predictor_68_landmarks.jpg
+   .. image:: for_readme/68_landmarks.png
       :align: center
 
 
-* Please install python packages: dlib and numpy at first:
+* 先安装依赖环境 / Please install python packages: dlib and numpy at first:
 
 .. code-block:: bash
 
@@ -37,7 +36,7 @@ About Source Code
 
 Python 源码介绍如下:
 
-#. Use camera in Python / Python OpenCv 调用摄像头;
+#. Use camera in Python / Python OpenCV 调用摄像头;
 
    .. code-block:: python
 
@@ -50,7 +49,7 @@ Python 源码介绍如下:
       python3 get_features_from_images.py:
 
 
-#. Real-time facial landmarks detect and draw feature points /这一步将调用摄像头进行实时人脸检测和特征点绘制;
+#. Real-time facial landmarks detection and draw feature points /这一步将调用摄像头进行实时人脸检测和特征点绘制;
 
    .. code-block:: python
 
@@ -60,14 +59,8 @@ Python 源码介绍如下:
 More
 ****
 
-
-Author: coneypo
-
-Blog: https://www.cnblogs.com/AdaminXie/p/8472743.html
-
-Mail: coneypo@foxmail.com
-
-AD: 用我的滴滴云 AI 大师推荐码: 7788, 购买滴滴云 GPU/vGPU/机器学习产品享 9 折优惠, 点击 https://www.didiyun.com/ 前往滴滴云官网
-
+* Author:   coneypo
+* Mail:     coneypo@foxmail.com
+* Blog:     https://www.cnblogs.com/AdaminXie/p/8472743.html
 
 Thanks for your support.

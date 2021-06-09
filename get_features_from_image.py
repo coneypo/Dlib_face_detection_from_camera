@@ -1,21 +1,21 @@
 # 对静态人脸图像文件进行68个特征点的标定
-# Real-time facial landmarks detect from local image
+# Real-time facial landmarks detection from local image
 
 # Author:   coneypo
 # Blog:     http://www.cnblogs.com/AdaminXie
 # GitHub:   https://github.com/coneypo/Dlib_face_detection_from_camera
 
-# Created at 2018-10-10
-
 import dlib         # 人脸处理的库 Dlib
 import numpy as np  # 数据处理的库 numpy
 import cv2          # 图像处理的库 OpenCv
 
-# Dlib 正向人脸检测
+# Dlib 正向人脸检测器 / Use frontal face detector of Dlib
 detector = dlib.get_frontal_face_detector()
-# 1. Using 5 landmarks
+
+# Dlib 人脸 landmark 特征点检测器 / Get face landmarks
 # predictor = dlib.shape_predictor('data/dlib/shape_predictor_5_face_landmarks.dat')
-# 2. Using 68 landmarks
+
+# Dlib 人脸 landmark 特征点检测器 / Get face landmarks
 predictor = dlib.shape_predictor('data/dlib/shape_predictor_68_face_landmarks.dat')
 
 # 读取图像文件

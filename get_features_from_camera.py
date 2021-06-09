@@ -1,12 +1,9 @@
 # 调用摄像头，进行人脸捕获，和68个特征点的追踪
-# Real-time facial landmarks detect from camera
+# Real-time facial landmarks detection from camera
 
 # Author:   coneypo
 # Blog:     http://www.cnblogs.com/AdaminXie
 # GitHub:   https://github.com/coneypo/Dlib_face_detection_from_camera
-
-# Created at 2018-02-26
-# Updated at 2019-12-20
 
 import dlib         # 人脸识别的库 Dlib
 import numpy as np  # 数据处理的库 numpy
@@ -17,54 +14,37 @@ import os
 # 储存截图的目录
 path_screenshots = "data/screenshots/"
 
-# Dlib 正向人脸检测
+# Dlib 正向人脸检测器 / Use frontal face detector of Dlib
 detector = dlib.get_frontal_face_detector()
 
-
-# Dlib 人脸特征点预测
-# 1. Using 5 landmarks
+# Dlib 人脸 landmark 特征点检测器 / Get face landmarks
 # predictor = dlib.shape_predictor('data/dlib/shape_predictor_5_face_landmarks.dat')
-# 2. Using 68 landmarks
+
+# Dlib 人脸 landmark 特征点检测器 / Get face landmarks
 predictor = dlib.shape_predictor('data/dlib/shape_predictor_68_face_landmarks.dat')
 
-# 创建 cv2 摄像头对象
-cap = cv2.VideoCapture(0)
-
-# cap.set(propId, value)
-# 设置视频参数，propId 设置的视频参数，value 设置的参数值
+# cap = cv2.VideoCapture("head-pose-face-detection-male.mp4")   # 输入视频
+cap = cv2.VideoCapture("0")                                     # 输入摄像头
 cap.set(3, 480)
+
+screenshot_cnt = 0
 
 
 # Delete all the screenshots
-def del_ss():
+def clear_screenshots():
     ss = os.listdir("data/screenshots/")
     for image in ss:
         print("Remove: ", "data/screenshots/"+image)
         os.remove("data/screenshots/"+image)
 
+# clear_screenshots()
 
-# del_ss()
 
-
-# 截图 screenshots 的计数器
-ss_cnt = 0
-
-# cap.isOpened() 返回 true/false 检查初始化是否成功
 while cap.isOpened():
-
-    # cap.read()
-    # 返回两个值：
-    #    一个布尔值 true/false，用来判断读取视频是否成功/是否到视频末尾
-    #    图像对象，图像的三维矩阵
     flag, im_rd = cap.read()
-
-    # 每帧数据延时 1ms，延时为 0 读取的是静态帧
     k = cv2.waitKey(1)
 
-    # 取灰度
     img_gray = cv2.cvtColor(im_rd, cv2.COLOR_RGB2GRAY)
-
-    # 人脸数
     faces = detector(img_gray, 0)
 
     # 待会要写的字体
@@ -75,7 +55,7 @@ while cap.isOpened():
         for i in range(len(faces)):
             landmarks = np.matrix([[p.x, p.y] for p in predictor(im_rd, faces[i]).parts()])
 
-            # 标68个点
+            # 标 68 个点
             for idx, point in enumerate(landmarks):
                 # 68点的坐标
                 pos = (point[0, 0], point[0, 1])
@@ -96,10 +76,10 @@ while cap.isOpened():
 
     # 按下 's' 键保存
     if k == ord('s'):
-        ss_cnt += 1
-        print(path_screenshots + "ss_" + str(ss_cnt) + "_" +
+        screenshot_cnt += 1
+        print(path_screenshots + "ss_" + str(screenshot_cnt) + "_" +
               time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + ".jpg")
-        cv2.imwrite(path_screenshots + "ss_" + str(ss_cnt) + "_" +
+        cv2.imwrite(path_screenshots + "ss_" + str(screenshot_cnt) + "_" +
                     time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + ".jpg", im_rd)
 
     # 按下 'q' 键退出
